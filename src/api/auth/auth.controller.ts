@@ -1,12 +1,11 @@
 import { Request, Response } from "express";
-import { loggerService } from "../../services/logger.service";
-import { authService } from "./auth.service";
+import { loggerService } from "../../services/logger.service.js";
+import { authService } from "./auth.service.js";
 
 export async function login(req: Request, res: Response): Promise<void> {
   const { username, password } = req.body;
   try {
     const user = await authService.login(username, password);
-    console.log("user:", user);
     const loginToken = authService.getLoginToken(user);
 
     loggerService.info("User login: ", user);
@@ -26,7 +25,7 @@ export async function signup(req: Request, res: Response): Promise<void> {
     password: req.body.password,
     email: req.body.email,
     imgUrl: req.body.imgUrl,
-    createdAt: req.body.createdAt,
+    createdAt: new Date(),
   };
   try {
     const account = await authService.signup(userToAdd);

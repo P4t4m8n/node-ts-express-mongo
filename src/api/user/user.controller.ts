@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { userService } from "./user.service";
-import { loggerService } from "../../services/logger.service";
-import { UserFilter, UserModal } from "../../modal/user.modal";
+import { userService } from "./user.service.js";
+import { loggerService } from "../../services/logger.service.js";
+import { UserFilter, UserModal } from "../../modal/user.modal.js";
 
 export async function getUserById(req: Request, res: Response): Promise<void> {
   try {
-    const user = await userService.getById(req.params.id);
+    const user = await userService.getById(req.params._id);
     res.send(user);
   } catch (err) {
     loggerService.error("Failed to get user", err);

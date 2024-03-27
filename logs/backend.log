@@ -1,0 +1,64 @@
+27.3.2024, 17:48:43 - INFO - Server is running on port: 3030
+27.3.2024, 18:21:13 - INFO - Server is running on port: 3030
+27.3.2024, 18:24:37 - INFO - Server is running on port: 3030
+27.3.2024, 18:24:54 - INFO - Server is running on port: 3030
+27.3.2024, 18:25:45 - INFO - Server is running on port: 3030
+27.3.2024, 18:26:33 - INFO - Server is running on port: 3030
+27.3.2024, 18:26:58 - INFO - Server is running on port: 3030
+27.3.2024, 18:27:00 - INFO - Server is running on port: 3030
+27.3.2024, 18:27:26 - INFO - Req was made | /
+27.3.2024, 18:27:52 - DEBUG - auth.service - signup with username: test
+27.3.2024, 18:27:52 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 18:27:52 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 18:27:52 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:39:58 - INFO - Server is running on port: 3030
+27.3.2024, 20:40:55 - INFO - Server is running on port: 3030
+27.3.2024, 20:40:57 - INFO - Server is running on port: 3030
+27.3.2024, 20:40:57 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:40:57 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:40:57 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 20:40:57 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 20:41:07 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:41:07 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 20:41:07 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 20:41:07 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:41:28 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:41:28 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 20:41:28 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 20:41:28 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:41:42 - INFO - Server is running on port: 3030
+27.3.2024, 20:41:44 - INFO - Server is running on port: 3030
+27.3.2024, 20:41:46 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:41:46 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:41:46 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 20:41:46 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 20:45:16 - INFO - Server is running on port: 3030
+27.3.2024, 20:45:22 - INFO - Server is running on port: 3030
+27.3.2024, 20:45:24 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:45:24 - ERROR - cannot insert user | Error: Unable to find user
+27.3.2024, 20:45:24 - ERROR - Failed to signup Error: Unable to find user
+27.3.2024, 20:45:24 - ERROR - while finding user test | Error: Unable to find user
+27.3.2024, 20:57:18 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:01 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:09 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:13 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:15 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:22 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:24 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:28 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:34 - INFO - Server is running on port: 3030
+27.3.2024, 20:59:53 - DEBUG - auth.service - signup with username: test
+27.3.2024, 20:59:53 - DEBUG - auth.service - login with username: test
+27.3.2024, 20:59:53 - DEBUG - auth.route - new account created: {"fullname":"test","username":"test","password":"$2b$10$EplL2hIuE1Qokf9ZumrT3ep7KYfVli8oMvrajPLIK2LCEfTELI/xO","email":"a@a","imgUrl":"","createdAt":"2024-03-27T18:59:53.880Z","_id":"66046ca97b54f7f120a82475"}
+27.3.2024, 21:00:48 - DEBUG - auth.service - signup with username: test
+27.3.2024, 21:00:48 - ERROR - cannot insert user | Error: Username taken
+27.3.2024, 21:00:48 - ERROR - Failed to signup Error: Username taken
+27.3.2024, 21:02:44 - DEBUG - auth.service - login with username: test
+27.3.2024, 21:02:45 - INFO - User login:  | {"_id":"66046ca97b54f7f120a82475","fullname":"test","username":"test","email":"a@a","imgUrl":"","createdAt":"2024-03-27T18:59:53.880Z"}
+27.3.2024, 21:04:17 - INFO - Server is running on port: 3030
+27.3.2024, 21:21:45 - INFO - Server is running on port: 3030
+27.3.2024, 21:29:34 - INFO - Server is running on port: 3030
+27.3.2024, 21:29:35 - INFO - Server is running on port: 3030
+27.3.2024, 21:30:05 - INFO - Server is running on port: 3030
+27.3.2024, 21:30:07 - INFO - Server is running on port: 3030
+27.3.2024, 21:30:56 - INFO - Server is running on port: 3030

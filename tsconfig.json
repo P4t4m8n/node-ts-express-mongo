@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "lib": [
-      "ES6",
-      "DOM",
-      "es2019"
-    ],
+    "target": "ESNext",
+    "lib": ["ES6", "DOM", "es2019"],
+    "allowJs": true,
     "module": "ESNext",
     "rootDir": "./src",
-    "moduleResolution": "Node",
-    "declaration": false,  
+    "moduleResolution": "node",
+    "declaration": false,
     "inlineSourceMap": false,
     "outDir": "./dist",
     "strict": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-
-  }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "esm": true
+}
+  
 }

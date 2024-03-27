@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { asyncLocalStorage } from "../services/als.service";
-import { authService } from "../api/auth/auth.service";
+import { asyncLocalStorage } from "../services/als.service.js";
+import { authService } from "../api/auth/auth.service.js";
 import { UserModal } from "../modal/user.modal";
 
 interface IAsyncLocalStorageStore {

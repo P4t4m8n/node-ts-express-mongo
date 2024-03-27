@@ -1,12 +1,12 @@
 import mongodb from "mongodb";
-import { dbService } from "../../services/db.service";
+import { dbService } from "../../services/db.service.js";
+import { loggerService } from "../../services/logger.service.js";
 import {
   QueryCriteria,
   TxtCriteria,
   UserFilter,
   UserModal,
 } from "../../modal/user.modal";
-import { loggerService } from "../../services/logger.service";
 const { ObjectId } = mongodb;
 
 export const userService = {
@@ -75,19 +75,8 @@ async function getByUsername(username: string): Promise<UserModal> {
   try {
     const collection = await dbService.getCollection("user");
     const user = await collection.findOne({ username });
-    if (!user) throw new Error("Unable to find user");
 
-    const fixedUser: UserModal = {
-      _id: user._id,
-      fullname: user.fullname,
-      username: user.username,
-      email: user.email,
-      isAdmin: user.isAdmin,
-      createdAt: (user.createdAt = new ObjectId(user._id).getTimestamp()),
-      imgUrl: user.imgUrl,
-    };
-
-    return fixedUser;
+    return user as UserModal;
   } catch (err) {
     loggerService.error(`while finding user ${username}`, err);
     throw err;
