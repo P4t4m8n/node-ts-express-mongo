@@ -6,7 +6,6 @@ import {
   UserFilter,
   UserModal,
 } from "../../modal/user.modal";
-import { error } from "console";
 import { loggerService } from "../../services/logger.service";
 const { ObjectId } = mongodb;
 
@@ -19,7 +18,7 @@ export const userService = {
   add,
 };
 
-async function query(filterBy = {}): Promise<UserModal[]> {
+async function query(filterBy: UserFilter = {}): Promise<UserModal[]> {
   const criteria = _buildCriteria(filterBy);
 
   try {
@@ -118,11 +117,13 @@ async function update(user: UserModal): Promise<UserModal> {
   }
 }
 
-async function add(user: UserModal): Promise<UserModal> {
+async function add(user: Partial<UserModal>): Promise<UserModal> {
+  const { username } = user;
+  if (!username) throw new Error("user have no username");
   try {
-    const existUser = await getByUsername(user.username);
+    const existUser = await getByUsername(username);
     if (existUser) throw new Error("Username taken");
-    const userToAdd = { ...user };
+    const userToAdd = { ...user } as UserModal;
     const collection = await dbService.getCollection("user");
     await collection.insertOne(userToAdd);
     return userToAdd;

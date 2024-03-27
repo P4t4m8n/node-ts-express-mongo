@@ -13,7 +13,7 @@ export interface UserModal {
 }
 
 export interface UserFilter {
-  txt: string;
+  txt?: string;
 }
 
 export interface TxtCriteria {

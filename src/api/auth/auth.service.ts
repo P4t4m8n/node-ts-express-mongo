@@ -18,8 +18,8 @@ async function login(username: string, password: string): Promise<UserModal> {
 
   const user = await userService.getByUsername(username);
   if (!user) throw new Error("Invalid username or password");
-
-  const match = await bcrypt.compare(password, user.password);
+  if (!user.password) throw new Error("Invalid password");
+  const match = bcrypt.compare(password, user.password);
   if (!match) throw new Error("Invalid username or password");
 
   delete user.password;
@@ -49,7 +49,7 @@ function getLoginToken(user: UserModal): string {
   return cryptr.encrypt(JSON.stringify(userInfo));
 }
 
-function validateToken(loginToken: string): string | null {
+function validateToken(loginToken: string): UserModal | null {
   try {
     const json = cryptr.decrypt(loginToken);
     const loggedinUser = JSON.parse(json);
