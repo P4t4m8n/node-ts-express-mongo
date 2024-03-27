@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { MongoClient } from "mongodb";
-import { loggerService } from "./logger.service"; // Assuming loggerService is already in TS
-import { config } from "../config/index"; // Ensure config is properly typed in TypeScript
+import { loggerService } from "./logger.service";
+import { config } from "../config/index";
 export const dbService = {
     getCollection,
 };
@@ -32,10 +32,7 @@ function _connect() {
         if (dbConn)
             return dbConn;
         try {
-            const client = yield MongoClient.connect(config.dbURL, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            });
+            const client = yield MongoClient.connect(config.dbURL);
             const db = client.db(config.dbName);
             dbConn = db;
             return db;

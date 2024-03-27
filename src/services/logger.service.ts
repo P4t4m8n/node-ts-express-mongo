@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 
 export const loggerService = {
   debug(...args: any[]) {
@@ -20,7 +20,7 @@ if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir);
 }
 
-function getTime() {
+function getTime(): string {
   let now = new Date();
   return now.toLocaleString("he");
 }
@@ -36,7 +36,11 @@ function doLog(level: string, ...args: any[]) {
   var line = strs.join(" | ");
   line = `${getTime()} - ${level} - ${line}\n`;
   console.log(line);
-  fs.appendFile("./logs/backend.log", line, (err:Error) => {
-    if (err) console.log("FATAL: cannot write to log file");
-  });
+  fs.appendFile(
+    "./logs/backend.log",
+    line,
+    (err: NodeJS.ErrnoException | null) => {
+      if (err) console.log("FATAL: cannot write to log file");
+    }
+  );
 }
